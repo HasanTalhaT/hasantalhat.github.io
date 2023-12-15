@@ -15,7 +15,7 @@
 
 <div class="header">
 <header>
-	<a class="a"href="hasan.html">HASAN TALHA TETIK</a>
+	<a class="a"href="dosyalar.html">HASAN TALHA TETIK</a>
 
 </header>
 </div>
@@ -50,23 +50,23 @@
   </button>
 </div>
 <div>
-	<img src="HASO.png"class="haso">
+  <a onclick="myAudioFunction('a');">
+  <img src="HASO.png" class="haso">
+</a>
 
-    <script>
-        function play() {
-          var audio = document.getElementById("audio");
-          audio.play();
-        }
-      </script>
-       <audio id="audio" src="hasan\ördek.mp3">xZx </audio>
-       <a onclick="play()" class="audio"></a>
-
-</img>
-</div>
-<div class="dosyalar">
-  <a href="dosyalar.html">
-    Dosyalar
-  </a>
+<script>
+  var aAudio = new Audio('ördek.mp3');
+  
+  function myAudioFunction(letter) {
+    if(letter == 'a') {
+      aAudio.play();
+    }
+  } // Add the missing closing curly brace here
+  
+</script>
 </div>
 
 </body>
+
+
+</html>
