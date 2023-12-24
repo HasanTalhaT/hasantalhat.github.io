@@ -121,7 +121,7 @@
     left: -25px;
     top: 0px;
     width: 175px;
-    transform: rotate(-90deg);
+    transform: rotate(deg);
     transition: width 2s, height 4s;
     border-radius: 7px;
     transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
