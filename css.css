@@ -118,8 +118,8 @@
 
 .haso {
     position: fixed;
-    left: -25px;
-    top: 0px;
+    left: 5px;
+    top: 10px;
     width: 175px;
     transform: rotate(deg);
     transition: width 2s, height 4s;
