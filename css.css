@@ -1,7 +1,7 @@
 .conteiner {
     font-size: 14px;
     color: yellow;
-    background: #f22ff url('') 0 0 repeat
+    background:  url('') 0 0 repeat
 }
 
 .header {
@@ -149,5 +149,5 @@
     font-size: 10px;
     position: relative;
     text-decoration: none;
-    color: hotpink;
+    color: rgb(28, 25, 187);
 }
