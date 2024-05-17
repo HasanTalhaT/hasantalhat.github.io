@@ -45,6 +45,7 @@
 
 .a {
     text-decoration: none;
+    cursor: default;
 }
 
 .p {
@@ -118,9 +119,9 @@
 
 .haso {
     position: fixed;
-    left: 5px;
-    top: 10px;
-    width: 175px;
+    left: 900px;
+    top: 80px;
+    width: 140px;
     transform: rotate(deg);
     transition: width 2s, height 4s;
     border-radius: 7px;
@@ -150,4 +151,18 @@
     position: relative;
     text-decoration: none;
     color: rgb(28, 25, 187);
+}
+
+.resim {
+    position: relative;
+    left: 270px;
+    top: 170px;
+    height: auto;
+    width: 800px;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    display: inline-block;
+    flex-direction: revert;
+    border: hotpink;
+    outline: snow;
+    cursor: default;
 }
