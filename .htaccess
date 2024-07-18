@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %index.html !-d
+RewriteCond %index.html.html -f
+RewriteRule ^([^/]+)/?$ %{REQUEST_FILENAME}.html [L]

@@ -155,8 +155,21 @@
 
 .resim {
     position: relative;
-    left: 270px;
-    top: 170px;
+    left: 30px;
+    top: 90px;
+    height: auto;
+    width: 800px;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    display: inline-block;
+    flex-direction: revert;
+    border: hotpink;
+    outline: snow;
+    cursor: default;
+}
+.resim2 {
+    position: relative;
+    left: 500px;
+    top: -190px;
     height: auto;
     width: 800px;
     transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
