@@ -53,7 +53,6 @@
   <a onclick="myAudioFunction('a');">
   <img src="HASO.png" class="haso">
 </a>
-
 <script>
   var aAudio = new Audio('ördek.mp3');
   
@@ -61,10 +60,52 @@
     if(letter == 'a') {
       aAudio.play();
     }
-  } // Add the missing closing curly brace here
-  
+  }
 </script>
 </div>
+
+<!-- Comment System -->
+<div class="comment-form">
+  <input type="text" id="commentInput" placeholder="Enter your comment" class="comment-input" />
+  <button onclick="addComment()" class="comment-button">Gönder</button>
+</div>
+<ul id="commentList" class="comment-list"></ul>
+
+<script>
+  // Load comments from localStorage when the page loads
+  document.addEventListener('DOMContentLoaded', (event) => {
+      loadComments();
+  });
+
+  function addComment() {
+      var commentInput = document.getElementById('commentInput');
+      var commentList = document.getElementById('commentList');
+
+      if (commentInput.value.trim() !== "") {
+          var newComment = document.createElement('li');
+          newComment.textContent = commentInput.value;
+          commentList.appendChild(newComment);
+          saveComment(commentInput.value);
+          commentInput.value = "";
+      }
+  }
+
+  function saveComment(comment) {
+      var comments = JSON.parse(localStorage.getItem('comments')) || [];
+      comments.push(comment);
+      localStorage.setItem('comments', JSON.stringify(comments));
+  }
+
+  function loadComments() {
+      var comments = JSON.parse(localStorage.getItem('comments')) || [];
+      var commentList = document.getElementById('commentList');
+      comments.forEach(function(comment) {
+          var newComment = document.createElement('li');
+          newComment.textContent = comment;
+          commentList.appendChild(newComment);
+      });
+  }
+</script>
 
 </body>
 
