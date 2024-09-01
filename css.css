@@ -194,38 +194,6 @@
 }
 
 /* Comment System Styles */
-.comment-section {
-    position: fixed;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 300px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.comment-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    width: 100%;
-}
-
-.comment-input {
-    flex: 1;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 10px;
-    width: calc(100% - 90px); /* Adjust width to fit the button */
-}
-
 .comment-button {
     padding: 5px 10px;
     background-color: #4CAF50;
