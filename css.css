@@ -214,37 +214,6 @@
     width: 100%;
 }
 
-.comment-input {
-    flex: 1;
-    padding: 10px; /* İç boşluk */
- 
-    border-radius: 4px;
-    margin-right: 10px;
-    width: calc(100% - 120px); /* Buton için daha fazla alan */
-}
-
-.comment-button {
-    padding: 10px 20px; /* Daha büyük buton */
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-
-
-.sync-button {
-    padding: 10px 20px; /* Daha büyük buton */
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 20px; /* Daha fazla üst boşluk */
-}
-
-
 .comment-list {
     list-style-type: none;
     padding: 0;
