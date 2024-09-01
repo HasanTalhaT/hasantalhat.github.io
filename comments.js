@@ -48,7 +48,7 @@ async function syncComments() {
 
     try {
         // Send the comments to the server
-        const response = await fetch('http://your-server-url/comments.php', {
+        const response = await fetch('http://hasantalhat.github.io/comments.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
