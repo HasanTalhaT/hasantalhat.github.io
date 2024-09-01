@@ -1,3 +1,4 @@
+// Load comments from localStorage when the page loads
 document.addEventListener('DOMContentLoaded', (event) => {
     loadComments();
 });
@@ -19,6 +20,9 @@ async function addComment() {
         newCommentElement.textContent = newComment.text;
         commentList.appendChild(newCommentElement);
         commentInput.value = "";
+
+        // Automatically sync comments after adding a new one
+        await syncComments();
     }
 }
 
@@ -43,7 +47,7 @@ async function syncComments() {
 
     try {
         // Send the comments to the server
-        const response = await fetch('https://hasantalhat.github.io/comments.php', {
+        const response = await fetch('http://your-server-url/comments.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
