@@ -35,6 +35,7 @@ function saveComment(comment) {
 function loadComments() {
     var comments = JSON.parse(localStorage.getItem('comments')) || [];
     var commentList = document.getElementById('commentList');
+    commentList.innerHTML = ''; // Clear existing comments
     comments.forEach(function(comment) {
         var newCommentElement = document.createElement('li');
         newCommentElement.textContent = comment.text;

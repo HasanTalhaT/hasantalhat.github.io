@@ -27,7 +27,7 @@ if ($method == 'GET') {
     } else {
         $comments = [];
     }
-    $comments = array_merge($comments, $input);
+    $comments[] = $input; // array_merge yerine doğrudan ekleme
     file_put_contents('comments.json', json_encode($comments));
     echo json_encode($input);
 }
