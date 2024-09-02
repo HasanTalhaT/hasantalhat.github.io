@@ -7,7 +7,6 @@
 	<link rel="stylesheet" type="text/css" href="css.css">
 	<style> @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap'); </style>
 	<link rel="script" type="text/javascript" href="vido.js">
-
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
@@ -74,59 +73,59 @@
 <div id="comments"></div>
 
 <script>
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyCJVsDJHseV2VwXyHNtAQT0lyHJIy0pKPA",
-  authDomain: "jshasan-fe32e.firebaseapp.com",
-  databaseURL: "https://jshasan-fe32e-default-rtdb.firebaseio.com",
-  projectId: "jshasan-fe32e",
-  storageBucket: "jshasan-fe32e.appspot.com",
-  messagingSenderId: "818860975877",
-  appId: "1:818860975877:web:f5fe21d6108d760f69f96c",
-  measurementId: "G-CVKQL2S1BH"
-};
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyCJVsDJHseV2VwXyHNtAQT0lyHJIy0pKPA",
+        authDomain: "jshasan-fe32e.firebaseapp.com",
+        databaseURL: "https://jshasan-fe32e-default-rtdb.firebaseio.com",
+        projectId: "jshasan-fe32e",
+        storageBucket: "jshasan-fe32e.appspot.com",
+        messagingSenderId: "818860975877",
+        appId: "1:818860975877:web:f5fe21d6108d760f69f96c",
+        measurementId: "G-CVKQL2S1BH"
+    };
 
-  // Firebase'i başlat
-  const app = firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
+    // Firebase'i başlat
+    const app = firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
 
-  // Yorum ekleme fonksiyonu
-  function addComment() {
-      const username = document.getElementById('username').value;
-      const comment = document.getElementById('comment').value;
+    // Yorum ekleme fonksiyonu
+    function addComment() {
+        const username = document.getElementById('username').value;
+        const comment = document.getElementById('comment').value;
 
-      db.collection("comments").add({
-          username: username,
-          comment: comment,
-          timestamp: firebase.firestore.FieldValue.serverTimestamp()
-      })
-      .then(() => {
-          alert("Yorum eklendi!");
-          loadComments();
-      })
-      .catch((error) => {
-          console.error("Yorum eklenirken hata oluştu: ", error);
-      });
-  }
+        db.collection("comments").add({
+            username: username,
+            comment: comment,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        })
+        .then(() => {
+            alert("Yorum eklendi!");
+            loadComments();
+        })
+        .catch((error) => {
+            console.error("Yorum eklenirken hata oluştu: ", error);
+        });
+    }
 
-  // Yorumları yükleme fonksiyonu
-  function loadComments() {
-      const commentsDiv = document.getElementById('comments');
-      commentsDiv.innerHTML = '';
+    // Yorumları yükleme fonksiyonu
+    function loadComments() {
+        const commentsDiv = document.getElementById('comments');
+        commentsDiv.innerHTML = '';
 
-      db.collection("comments").orderBy("timestamp", "desc").get().then((querySnapshot) => {
-          querySnapshot.forEach((doc) => {
-              const commentData = doc.data();
-              const commentElement = document.createElement('div');
-              commentElement.textContent = `${commentData.username}: ${commentData.comment}`;
-              commentsDiv.appendChild(commentElement);
-          });
-      });
-  }
+        db.collection("comments").orderBy("timestamp", "desc").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                const commentData = doc.data();
+                const commentElement = document.createElement('div');
+                commentElement.textContent = `${commentData.username}: ${commentData.comment}`;
+                commentsDiv.appendChild(commentElement);
+            });
+        });
+    }
 
-  // Sayfa yüklendiğinde yorumları yükle
-  window.onload = loadComments;
-</script>
-
+    // Sayfa yüklendiğinde yorumları yükle
+    window.onload = loadComments;
+  </script>
+</body>
 
 </html>
