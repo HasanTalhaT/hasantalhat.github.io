@@ -7,8 +7,9 @@
 	<link rel="stylesheet" type="text/css" href="css.css">
 	<style> @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap'); </style>
 	<link rel="script" type="text/javascript" href="vido.js">
-	
-
+	<!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
 </head>
 <body class="body">
 
@@ -63,17 +64,16 @@
 </script>
 </div>
 
-<!-- Comment System -->
-    <div class="comment-section">
-        <div class="comment-form">
-            <input type="text" id="commentInput" placeholder="Yorum Yaz" class="comment-input" />
-            <button onclick="addComment()" class="comment-button">Gönder</button>
-        </div>
-        <ul id="commentList" class="comment-list"></ul>
-    </div>
+ <!-- Comment System -->
+ <div class="comment-section">
+  <div class="comment-form">
+      <input type="text" id="commentInput" placeholder="Yorum Yaz" class="comment-input" />
+      <button onclick="addComment()" class="comment-button">Gönder</button>
+  </div>
+  <ul id="commentList" class="comment-list"></ul>
+</div>
 
-    <script src="comments.js"></script>
-</body>
+<script src="comments.js"></script>
 
 
 </html>
