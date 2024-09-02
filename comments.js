@@ -1,5 +1,5 @@
 const GITHUB_API_URL = 'https://api.github.com';
-const GITHUB_REPO = 'HasanTalhaT/hasan'; // GitHub kullanıcı adı ve depo adı
+const GITHUB_REPO = 'HasanTalhaT/hasantalhat.github.io'; // GitHub kullanıcı adı ve depo adı
 const GITHUB_FILE_PATH = 'comments.json'; // Yorumların saklanacağı dosya
 const GITHUB_TOKEN = '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'; // Kişisel erişim belirteci
 
