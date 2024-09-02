@@ -1,7 +1,7 @@
 const GITHUB_API_URL = 'https://api.github.com';
 const GITHUB_REPO = 'HasanTalhaT/hasantalhat.github.io'; // GitHub kullanıcı adı ve depo adı
 const GITHUB_FILE_PATH = 'comments.json'; // Yorumların saklanacağı dosya
-const GITHUB_TOKEN = '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'; // Kişisel erişim belirteci
+const GITHUB_TOKEN = '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'; // Kişisel erişim belirteci
 
 // Load comments from GitHub when the page loads
 document.addEventListener('DOMContentLoaded', async (event) => {
