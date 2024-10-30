@@ -1,7 +1,7 @@
-.conteiner {
+.container {
     font-size: 14px;
     color: yellow;
-    background:  url('') 0 0 repeat
+    background:  url('') 0 0 repeat;
 }
 
 .header {
@@ -10,7 +10,7 @@
     font-size: 25px;
     vertical-align: middle;
     color: white;
-    font-style: rgba(0, 0, 0, 1);
+    font-style: normal;
     font-family: 'Rowdies', cursive;
 }
 
@@ -52,7 +52,7 @@
     font-family: 'Rowdies', cursive;
     text-align: center;
     color: ghostwhite;
-    font-style: rgba(0, 0, 0, 1);
+    font-style: normal;
     height: 100px;
     position: relative;
     left: 0;
@@ -72,7 +72,6 @@
     padding: 15px 32px;
     color: transparent;
     outline: 0;
-    border: none;
     -webkit-animation: bgcolor 20s infinite;
     animation: bgcolor 10s infinite;
     -webkit-animation-direction: alternate;
@@ -122,14 +121,12 @@
     left: 900px;
     top: 80px;
     width: 140px;
-    transform: rotate(deg);
-    transition: width 2s, height 4s;
     border-radius: 7px;
     transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
     display: inline-block;
     flex-direction: revert;
-    border: hotpink;
-    outline: snow;
+
+    outline: 1px solid snow;
 }
 
 .dosyalar {
@@ -139,7 +136,6 @@
     font-style: rgba(0, 0, 0, 1);
     font-size: 10px;
     position: relative;
-    text-decoration: none;
 }
 
 .link {
@@ -149,7 +145,6 @@
     font-style: rgba(0, 0, 0, 1);
     font-size: 25px;
     position: relative;
-    text-decoration: none;
     color: rgb(28, 25, 187);
 }
 
@@ -193,75 +188,3 @@
     cursor: default;
 }
 
-/* Comment System Styles */
-.comment-section {
-    position: fixed;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 300px; /* Genişliği ayarlayın */
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 20px; /* İç boşluk */
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1); /* Gölge */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.comment-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    width: 100%;
-}
-
-.comment-input {
-    flex: 1;
-    padding: 10px; /* İç boşluk */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 10px;
-    width: calc(100% - 120px); /* Buton için daha fazla alan */
-}
-
-.comment-button {
-    padding: 10px 20px; /* Daha büyük buton */
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.comment-button:hover {
-    background-color: #45a049;
-}
-
-.sync-button {
-    padding: 10px 20px; /* Daha büyük buton */
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 20px; /* Daha fazla üst boşluk */
-}
-
-.sync-button:hover {
-    background-color: #0056b3;
-}
-
-.comment-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
-.comment-list li {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0; /* Daha fazla iç boşluk */
-    width: 100%;
-}
