@@ -125,8 +125,7 @@
     transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
     display: inline-block;
     flex-direction: revert;
-
-    outline: 1px solid snow;
+    
 }
 
 .dosyalar {
