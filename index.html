@@ -1,15 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Hasan</title>
-	<link rel="stylesheet" type="text/css" href="css.css">
-	<style> @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap'); </style>
-	<link rel="script" type="text/javascript" href="vido.js">
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dosyalar</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap');
+    </style>
+    <link rel="stylesheet" type="text/css" href="css2">
+    <style>
+        /* Snow Effect Styles */
+        #snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
 </head>
 <body class="body">
 
@@ -64,6 +92,25 @@
 </script>
 </div>
 
-</body>
+<div id="snow-container"></div>
 
+<script>
+    // Snow Effect Script
+    const snowContainer = document.getElementById('snow-container');
+    const snowflakeCount = 50;
+
+    for (let i = 0; i < snowflakeCount; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        const size = Math.random() * 10 + 5 + 'px';
+        snowflake.style.width = size;
+        snowflake.style.height = size;
+        snowflake.style.left = Math.random() * 100 + 'vw';
+        snowflake.style.animationDuration = Math.random() * 5 + 5 + 's';
+        snowflake.style.animationDelay = Math.random() * 5 + 's';
+        snowContainer.appendChild(snowflake);
+    }
+</script>
+
+</body>
 </html>
