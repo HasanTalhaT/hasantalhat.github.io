@@ -112,10 +112,40 @@
     }
 </script>
 
+<!-- Fireworks Container -->
+<div id="fireworks-container"></div>
+
+<!-- Nyan Cat -->
 <div class="nyan-cat">
-  <img src="nyan-cat.gif" alt="Nyan Cat">
+    <img src="nyan-cat.gif" alt="Nyan Cat">
 </div>
 
+<!-- Fireworks JS Library -->
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.1.0/dist/fireworks.min.js"></script>
 
+<script>
+  // Fireworks Initialization
+  const fireworksContainer = document.getElementById('fireworks-container');
+  const fireworks = new Fireworks(fireworksContainer, { 
+      speed: 2,
+      acceleration: 1.05,
+      friction: 0.97,
+      gravity: 1.5,
+      particles: 50,
+      trace: 3,
+      explosion: 5,
+      autoresize: true,
+      brightness: { min: 50, max: 80 },
+      boundaries: { x: 50, y: 50, width: window.innerWidth - 100, height: window.innerHeight - 100 },
+  });
+
+  fireworks.start();
+
+  // Trigger Fireworks on Nyan Cat Click
+  const nyanCat = document.querySelector('.nyan-cat img');
+  nyanCat.addEventListener('click', (e) => {
+      fireworks.trigger(e.clientX, e.clientY);
+  });
+</script>
 </body>
 </html>
