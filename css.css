@@ -189,15 +189,15 @@
 
 .nyan-cat {
     position: fixed;
-    bottom: 450px;
-    left: 700px;
+    bottom: 10px;
+    left: 850px;
     width: 100%;
     z-index: -1;
     overflow: hidden;
 }
 
 .nyan-cat img {
-    width: 25%;
+    width: 15%;
     animation: moveNyan 8s linear infinite;
 }
 
@@ -207,5 +207,30 @@
     }
     to {
         transform: translateX(50%);
+    }
+}
+
+ /* kar efekti sytles */
+ #snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+.snowflake {
+    position: absolute;
+    top: -10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
     }
 }

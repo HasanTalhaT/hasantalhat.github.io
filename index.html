@@ -5,36 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dosyalar</title>
     <link rel="stylesheet" type="text/css" href="css.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap');
-    </style>
-    <link rel="stylesheet" type="text/css" href="css.css">
-    <style>
-        /* kar efekti sytles */
-        #snow-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9999;
-        }
-        .snowflake {
-            position: absolute;
-            top: -10px;
-            background: white;
-            border-radius: 50%;
-            opacity: 0.8;
-            animation: fall linear infinite;
-        }
-        @keyframes fall {
-            to {
-                transform: translateY(100vh);
-                opacity: 0;
-            }
-        }
-    </style>
+    <script src="js.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
@@ -44,21 +15,21 @@
 <div class="header">
 <header>
 	<a class="a"href="dosyalar.html">HASAN TALHA TETIK</a>
-
 </header>
+
 </div>
 <div class="p" >
 <p>	
 <h3>!!! BEN HASAN !!!</h3>
-<h4></h4>
 </p>
 </div>
+
 <div>
     <video id='video' class="videoo">
       <source src="deve.mp4" type="video/mp4">
   </video>
-  
 </div>
+
 <div>
   <button id='stopVid' class="button2">
     <script>
@@ -68,6 +39,7 @@
     </script>
   </button>
 </div>
+
 <div>
   <button id='playVid' class="button3">
     <script>
@@ -79,7 +51,7 @@
 </div>
 <div>
   <a onclick="myAudioFunction('a');">
-  <img src="HASO.png" class="haso">
+  <img src="HASO.png" class="haso" id="hasoImage">
 </a>
 <script>
   var aAudio = new Audio('ördek.mp3');
@@ -111,41 +83,44 @@
         snowContainer.appendChild(snowflake);
     }
 </script>
-
-<!-- Fireworks Container -->
-<div id="fireworks-container"></div>
-
-<!-- Nyan Cat -->
 <div class="nyan-cat">
-    <img src="nyan-cat.gif" alt="Nyan Cat">
+  <img src="nyan-cat.gif" alt="Nyan Cat">
 </div>
 
-<!-- Fireworks JS Library -->
-<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.1.0/dist/fireworks.min.js"></script>
+<!-- Fireworks JS Kütüphanesi -->
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2/dist/fireworks.js"></script>
+
+<!-- Fireworks Konteyneri -->
+<div id="fireworks-container"></div>
 
 <script>
-  // Fireworks Initialization
-  const fireworksContainer = document.getElementById('fireworks-container');
-  const fireworks = new Fireworks(fireworksContainer, { 
-      speed: 2,
-      acceleration: 1.05,
-      friction: 0.97,
-      gravity: 1.5,
-      particles: 50,
-      trace: 3,
-      explosion: 5,
-      autoresize: true,
-      brightness: { min: 50, max: 80 },
-      boundaries: { x: 50, y: 50, width: window.innerWidth - 100, height: window.innerHeight - 100 },
+  // Fireworks Başlatma
+  const container = document.getElementById('fireworks-container');
+  const fireworks = new Fireworks(container, {
+    speed: 2,
+    acceleration: 1.05,
+    friction: 0.97,
+    gravity: 1.5,
+    particles: 50,
+    trace: 3,
+    explosion: 5,
+    autoresize: true,
+    brightness: { min: 50, max: 80 },
+    boundaries: { x: 50, y: 50, width: window.innerWidth - 100, height: window.innerHeight - 100 },
   });
 
   fireworks.start();
 
-  // Trigger Fireworks on Nyan Cat Click
-  const nyanCat = document.querySelector('.nyan-cat img');
-  nyanCat.addEventListener('click', (e) => {
-      fireworks.trigger(e.clientX, e.clientY);
-  });
+  // Her 30 saniyede bir havai fişek patlatma
+  setInterval(() => {
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+    fireworks.trigger(x, y);
+  }, 30000); // 30000 milisaniye = 30 saniye
 </script>
+
+
+
+
 </body>
 </html>
