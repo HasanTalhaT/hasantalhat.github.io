@@ -187,3 +187,25 @@
     cursor: default;
 }
 
+.nyan-cat {
+    position: fixed;
+    bottom: 450px;
+    left: 700px;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.nyan-cat img {
+    width: 25%;
+    animation: moveNyan 8s linear infinite;
+}
+
+@keyframes moveNyan {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(50%);
+    }
+}
