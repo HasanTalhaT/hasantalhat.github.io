@@ -1,45 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dosyalar</title>
+    <title>Dosyalar - Hasan Talha Tetik</title>
     <link rel="stylesheet" type="text/css" href="css.css">
-   
-     <style>@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap');</style>
-    </head>
-<body class="body">
-    
-<li class="link">
-<a href="Bir Çocuğun İstanbul Hatıraları 1901-1913.pptx" class="link">Bir Çocuğun İstanbul Hatıraları</a>
-</li>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">HASAN TALHA TETIK</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                <li><a href="dosyalar.html" class="nav-link active">Dosyalar</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<li class="link">
-    <a href="main (4).pdf" class="link">Tarih Yazımında Arz ve Talep Dengesi</a>
-    </li>
+    <!-- Files Section -->
+    <section class="files-section">
+        <div class="container">
+            <h2 class="section-title">Dosyalarım</h2>
+            <p class="section-subtitle">Araştırmalar ve çalışmalarım</p>
+            
+            <div class="files-grid">
+                <!-- File Card 1 -->
+                <div class="file-card">
+                    <div class="file-icon">📄</div>
+                    <h3 class="file-title">Bir Çocuğun İstanbul Hatıraları</h3>
+                    <p class="file-description">1901-1913 İstanbul anıları</p>
+                    <a href="Bir Çocuğun İstanbul Hatıraları 1901-1913.pptx" class="btn-download" download>
+                        İndir
+                    </a>
+                </div>
 
-<li class="link">
-    <a href="Manes-Lemures-Camenae.docx" class="link">Manes-Lemures-Camenae</a>
-    </li>
+                <!-- File Card 2 -->
+                <div class="file-card">
+                    <div class="file-icon">📚</div>
+                    <h3 class="file-title">Tarih Yazımında Arz ve Talep Dengesi</h3>
+                    <p class="file-description">Akademik çalışma</p>
+                    <a href="main (4).pdf" class="btn-download" download>
+                        İndir
+                    </a>
+                </div>
 
-<li class="link">
-    <a href="Ortaçağ Avrupa'sında Tıp Tarihi.pptx" class="link">Ortaçağ Avrupa'da Tıp</a>
-    </li>
+                <!-- File Card 3 -->
+                <div class="file-card">
+                    <div class="file-icon">📝</div>
+                    <h3 class="file-title">Manes-Lemures-Camenae</h3>
+                    <p class="file-description">Araştırma belgesi</p>
+                    <a href="Manes-Lemures-Camenae.docx" class="btn-download" download>
+                        İndir
+                    </a>
+                </div>
 
-    <li class="link">
-        <a href="Josephus Antik Yahudiler 1-2.pdf" download class="link">Josephus Antik Yahudiler 1-2</a>
-    </li>
+                <!-- File Card 4 -->
+                <div class="file-card">
+                    <div class="file-icon">🏥</div>
+                    <h3 class="file-title">Ortaçağ Avrupa'da Tıp</h3>
+                    <p class="file-description">Tıp tarihi sunumu</p>
+                    <a href="Ortaçağ Avrupa'sında Tıp Tarihi.pptx" class="btn-download" download>
+                        İndir
+                    </a>
+                </div>
 
+                <!-- File Card 5 -->
+                <div class="file-card">
+                    <div class="file-icon">📖</div>
+                    <h3 class="file-title">Josephus Antik Yahudiler 1-2</h3>
+                    <p class="file-description">Tarih kitabı</p>
+                    <a href="Josephus Antik Yahudiler 1-2.pdf" class="btn-download" download>
+                        İndir
+                    </a>
+                </div>
+            </div>
 
-    
-<div class="resim">
-    <a href="index.html" >
-<img src="adsız.png" class="resim">
-</a>
-<div class="resim2">
-    
+            <!-- Back Button -->
+            <div class="back-button-container">
+                <a href="index.html" class="btn-back">
+                    ← Ana Sayfaya Dön
+                </a>
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <!-- Snow Effect Container -->
+    <div id="snow-container"></div>
 
+    <!-- Scripts -->
+    <script src="js.js"></script>
 </body>
 </html>

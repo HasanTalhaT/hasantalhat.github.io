@@ -1,124 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dosyalar</title>
+    <title>Hasan Talha Tetik - Ana Sayfa</title>
     <link rel="stylesheet" type="text/css" href="css.css">
-    <script src="js.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap');</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body class="body">
-<div class="header">
-<header>
-	<a class="a"href="dosyalar.html">HASAN TALHA TETIK</a>
-</header>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">HASAN TALHA TETIK</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Ana Sayfa</a></li>
+                <li><a href="dosyalar.html" class="nav-link">Dosyalar</a></li>
+            </ul>
+        </div>
+    </nav>
 
-</div>
-<div class="p" >
-<p>	
-<h3>!!! BEN HASAN !!!</h3>
-</p>
-</div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2 class="hero-title">Merhaba!</h2>
+                <h3 class="hero-subtitle">Ben Hasan!</h3>
+                <p class="hero-description">Hoş geldiniz! Sitemi keşfetmeye başlayın.</p>
+                <a href="dosyalar.html" class="btn-primary">Dosyaları Gör</a>
+            </div>
+            
+            <!-- Interactive Image -->
+            <div class="hero-image">
+                <img src="HASO.png" alt="Hasan" class="profile-img" id="hasoImage">
+                <audio id="hasoAudio" src="ördek.mp3"></audio>
+            </div>
+        </div>
+    </section>
 
-<div>
-    <video id='video' class="videoo">
-      <source src="deve.mp4" type="video/mp4">
-  </video>
-</div>
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title">Video</h2>
+            <div class="video-wrapper">
+                <video id="video" class="responsive-video" controls>
+                    <source src="deve.mp4" type="video/mp4">
+                    Tarayıcınız video etiketini desteklemiyor.
+                </video>
+                <div class="video-controls">
+                    <button id="playBtn" class="btn-control">▶ Oynat</button>
+                    <button id="pauseBtn" class="btn-control">⏸ Duraklat</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div>
-  <button id='stopVid' class="button2">
-    <script>
-      document.getElementById('stopVid').onclick = function () {
-      document.getElementById('video').pause();
-  };
-    </script>
-  </button>
-</div>
+    <!-- Snow Effect Container -->
+    <div id="snow-container"></div>
 
-<div>
-  <button id='playVid' class="button3">
-    <script>
-      document.getElementById('playVid').onclick = function () {
-      document.getElementById('video').play();
-  };
-    </script>
-  </button>
-</div>
-<div>
-  <a onclick="myAudioFunction('a');">
-  <img src="HASO.png" class="haso" id="hasoImage">
-</a>
-<script>
-  var aAudio = new Audio('ördek.mp3');
-  
-  function myAudioFunction(letter) {
-    if(letter == 'a') {
-      aAudio.play();
-    }
-  }
-</script>
-</div>
+    <!-- Nyan Cat -->
+    <div class="nyan-cat">
+        <img src="nyan-cat.gif" alt="Nyan Cat">
+    </div>
 
-<div id="snow-container"></div>
+    <!-- Fireworks Container -->
+    <div id="fireworks-container"></div>
 
-<script>
-    // Kar efekti
-    const snowContainer = document.getElementById('snow-container');
-    const snowflakeCount = 50;
-
-    for (let i = 0; i < snowflakeCount; i++) {
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
-        const size = Math.random() * 10 + 5 + 'px';
-        snowflake.style.width = size;
-        snowflake.style.height = size;
-        snowflake.style.left = Math.random() * 100 + 'vw';
-        snowflake.style.animationDuration = Math.random() * 5 + 5 + 's';
-        snowflake.style.animationDelay = Math.random() * 5 + 's';
-        snowContainer.appendChild(snowflake);
-    }
-</script>
-<div class="nyan-cat">
-  <img src="nyan-cat.gif" alt="Nyan Cat">
-</div>
-
-<!-- Fireworks JS Kütüphanesi -->
-<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.1.0/dist/fireworks.umd.js"></script>
-
-<!-- Fireworks Konteyneri -->
-<div id="fireworks-container"></div>
-
-<script>
-  // Fireworks Başlatma
-  const container = document.getElementById('fireworks-container');
-  const fireworks = new Fireworks(container,{
-    speed: 2,
-    acceleration: 1.05,
-    friction: 0.97,
-    gravity: 1.5,
-    particles: 50,
-    trace: 3,
-    explosion: 5,
-    autoresize: true,
-    brightness: { min: 50, max: 80 },
-    boundaries: { x: 50, y: 50, width: window.innerWidth - 100, height: window.innerHeight - 100 },
-  });
-
-  fireworks.start();
-
-  // Her 30 saniyede bir havai fişek patlatma
-  setInterval(() => {
-    const x = Math.random() * window.innerWidth;
-    const y = Math.random() * window.innerHeight;
-    fireworks.trigger(x, y);
-  }, 3000); // 30000 milisaniye = 30 saniye
-</script>
-
-
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.1.0/dist/fireworks.umd.js"></script>
+    <script src="js.js"></script>
 </body>
 </html>
