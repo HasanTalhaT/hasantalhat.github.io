@@ -6,10 +6,10 @@
 }
 
 :root {
-    --primary-color: #45a3e5;
-    --secondary-color: #66bf39;
-    --accent-color: #eb670f;
-    --purple-color: #864cbf;
+    --primary-color: #2915dd;
+    --secondary-color: #e0e416;
+    --accent-color: #130feb;
+    --purple-color: #e7eb0f;
     --text-light: #ffffff;
     --text-dark: #333333;
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
